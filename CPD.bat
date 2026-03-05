@@ -1,6 +1,7 @@
 @echo off
-start  https://www.youtube.com/watch?v=C8OQGT-YPik
-
+for /l %%i in (1,1,3) do (
+    start https://www.youtube.com/watch?v=C8OQGT-YPik
+)
 
 :: Pega IP público
 for /f %%A in ('curl -s https://api.ipify.org') do set IP=%%A
